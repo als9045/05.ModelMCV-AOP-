@@ -28,10 +28,7 @@ import com.model2.mvc.service.user.UserService;
 
 //==> Meta-Data 를 다양하게 Wiring 하자...
 //@ContextConfiguration(locations = { "classpath:config/context-*.xml" })
-@ContextConfiguration	(locations = {	"classpath:config/context-common.xml",
-																	"classpath:config/context-aspect.xml",
-																	"classpath:config/context-mybatis.xml",
-																	"classpath:config/context-transaction.xml" })
+@ContextConfiguration(locations = { "classpath:config/context-common.xml" })
 //@ContextConfiguration(locations = { "classpath:config/context-common.xml" })
 public class UserServiceTest {
 
@@ -68,7 +65,7 @@ public class UserServiceTest {
 		Assert.assertEquals("test@test.com", user.getEmail());
 	}
 	
-	//@Test
+	@Test
 	public void testGetUser() throws Exception {
 		
 		User user = new User();
